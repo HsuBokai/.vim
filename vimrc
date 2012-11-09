@@ -1,9 +1,25 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
 
 set runtimepath=~/.vim,/usr/share/vim,/usr/local/share/vim/vimfiles,/usr/local/share/vim,/usr/local/share/vim/vimfiles/after,~/.vim/after,$VIMRUNTIME
 
-set tags=./tags,../tags,/usr/share/vim/vim73/tags
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+"for NERDTree plugin
+nmap <leader>e  :NERDTreeToggle<CR>
+
+"for taglist plugin
+filetype on
+
+let g:winManagerWindowLayout='FileExplorer|TagList'
+nmap wm :WMToggle<cr>
+
+"for auto pad
+filetype plugin indent on
+set completeopt=longest,menu
+
+
+
+set tags=./tags,../tags,/usr/share/vim/vim73/tags,~/LTE/LTE-Sim/src/tags
 set autoindent
 set number
 "set helplang=cn
