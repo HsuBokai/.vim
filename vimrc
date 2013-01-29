@@ -26,7 +26,7 @@ set number
 "set encoding=utf-8
 syntax enable 
 syntax on
-colorscheme torte
+"colorscheme torte
 
 set ai
 
